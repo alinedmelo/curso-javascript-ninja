@@ -44,22 +44,21 @@ var showTeamPosition = function(posicao) {
 
     var classificacao = teams[posicao -1];
 
-    if(posicao > 5 || !posicao) {
+    if(posicao < 1 || posicao > 5 || !posicao) {
         return `Não temos a informação do time que está nessa posição.`;
-    } else {
-        return `O time que está em ${posicao}º lugar é: ${teams[posicao -1]}`;
     }
 
+    return `O time que está em ${posicao}º lugar é: ${classificacao}`;
 };
 
 /*
 Escolha 4 times do campeonato selecionado e mostre a posição dele, usando a
 função acima. Entre esses 4, adicione 1 que não esteja entre os 5 primeiros.
 */
-showTeamPosition(1); //"O time que está em 1º lugar é: Brasil"
-showTeamPosition(2); //"O time que está em 2º lugar é: França"
-showTeamPosition(3); //"O time que está em 3º lugar é: Bélgica"
-showTeamPosition(8); //"Não temos a informação do time que está nessa posição."
+console.log(showTeamPosition(1)); //"O time que está em 1º lugar é: Brasil"
+console.log(showTeamPosition(2)); //"O time que está em 2º lugar é: França"
+console.log(showTeamPosition(3)); //"O time que está em 3º lugar é: Bélgica"
+console.log(showTeamPosition(8)); //"Não temos a informação do time que está nessa posição."
 /*
 Mostre os números de 20 a 30 no console (inclusive o 30), usando a estrutura de
 repetição "while".
@@ -69,7 +68,7 @@ var count = 20;
 while(count <= 30) {
     console.log(count);
     count++;
-} 
+}
 
 /*
 Crie uma função chamada `convertToHex`, com as seguintes características:
@@ -92,30 +91,30 @@ var convertToHex = function(cor) {
             rosa = '#ea1888';
 
     switch (cor) {
-        case 'vermelho': 
+        case 'vermelho':
             console.log('O hexadecimal para a cor ' + cor + ' é: ' + vermelho);
             break;
-        
-        case 'verde': 
+
+        case 'verde':
             console.log('O hexadecimal para a cor ' + cor + ' é: ' + verde);
             break;
 
-        case 'laranja': 
+        case 'laranja':
             console.log('O hexadecimal para a cor ' + cor + ' é: ' + laranja);
             break;
 
-        case 'azul': 
+        case 'azul':
             console.log('O hexadecimal para a cor ' + cor + ' é: ' + azul);
             break;
 
-        case 'rosa': 
+        case 'rosa':
             console.log('O hexadecimal para a cor ' + cor + ' é: ' + rosa);
             break;
         default:
             console.log('Não temos o equivalente hexadecimal para ' + cor);
-        
+
     }
-    
+
 };
 /*
 Tente mostrar o hexadecimal de 8 cores diferentes usando a função criada acima.
